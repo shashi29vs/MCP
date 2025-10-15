@@ -9,13 +9,14 @@ export default {
 
   // Runtime configuration
   runtime: "nodejs",
-  buildCommand: "npm install",
-  startCommand: "npm start",
+  buildCommand: "npm ci --only=production",
+  startCommand: "node src/server.js",
 
   // Environment variables (can also be set in FastMCP dashboard)
   env: {
     NODE_ENV: "production",
     PORT: "3000",
+    ALLOWED_ORIGINS: "*"
   },
 
   // MCP-specific configuration
